@@ -1,0 +1,73 @@
+*,*::before, *::after{
+	box-sizing: border-box;
+	font-family: Verdana;
+}
+body{
+	padding: 0;
+	margin:0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(116, 131, 211);
+}
+body.wrong{
+	background-color: red;
+}
+
+body.correct{
+	background-color: green;
+}
+.container{
+	width: 800px;
+	max-width: 80%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	
+}
+.btn-grid{
+	display: grid;
+	grid-template-columns: repeat(2);
+	gap: 10px;
+	margin: 20px, 0;
+}
+.btn{
+	background-color: rgb(116, 131, 211);
+	border-color: rgb(116, 131, 211)
+	border-radius: 10px;
+	padding: 10px 10px;
+	color: white;
+	outline: none;
+}
+.btn:hover{
+	border-color: black;
+}
+.btn.wrong{
+	background-color: red;
+	color: white;
+}
+.btn.correct{
+	background-color: green;
+	color: white;
+}
+.start-btn, .next-btn{
+	font-size: 30px;
+	font-weight: 20px;
+}
+.controls{	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3);
+	gap: 10px;
+}
+.hide{
+	display: none;
+}
+ @media screen and (max-width: 320px){
+        ul li{
+            font-size: 0.5em;
+        }
