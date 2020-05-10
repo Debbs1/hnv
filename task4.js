@@ -66,7 +66,7 @@ function selectAns (e){
     	nextBtn.classList.remove('hide')
     	}else {
     		startBtn.innerText = 'retry'
-    		retry-btn.classList.remove ('hide')
+    		retryBtn.classList.remove ('hide')
     	}
 	
     }
