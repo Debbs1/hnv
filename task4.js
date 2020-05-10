@@ -48,7 +48,7 @@ function showQuestion(question){
 		scoreNumber++
 	})
 }
-
+retryBtn.addEventListener('click', resetState)
 function resetState(){
 	clearStatusClass(document.body)
 	nextBtn.classList.add('hide')
