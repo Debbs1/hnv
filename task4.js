@@ -14,7 +14,7 @@ let shuffleQuestions, index
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', () => {
 	index++
-	setNextQuestion()
+	nextQuestion()
 })
 function startGame(){
 	startBtn.classList.add('hide')
@@ -59,7 +59,7 @@ function selectAns (e){
 	const selectedBtn= e.target
 	const correct = selectedBtn.dataset.correct
 	setStatusClass(document.body, correct)
-	Array.from(answers.children).forEach(button =>{
+	Array.from(answers).forEach(button =>{
 		setStatusClass(button, button.dataset.correct)
     })
     if (shuffleQuestions.length > index + 1){
