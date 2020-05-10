@@ -21,6 +21,7 @@ function startGame(){
 	score.classList.remove('hide')
 	questionContainer.classList.remove('hide')
 	nextBtn.classList.remove('hide')
+	retryBtn.classList.add('hide')
 	shuffleQuestions = question.sort(() => Math.random () -.5)
 	index= 0
 	scoreNumber = 0
@@ -48,7 +49,7 @@ function showQuestion(question){
 		scoreNumber++
 	})
 }
-retryBtn.addEventListener('click', resetState)
+retryBtn.addEventListener('click', startGame)
 function resetState(){
 	clearStatusClass(document.body)
 	nextBtn.classList.add('hide')
