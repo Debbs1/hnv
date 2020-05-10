@@ -1,7 +1,7 @@
 const container = document.getElementById('container');
 const score  = document.getElementById('score');
 const scoreText = document.getElementById('score-text');
-const scoreNumber = document.getElementById('score-number');
+let scoreNumber = document.getElementById('score-number');
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerBtn = document.getElementById('answer-btn');
@@ -23,6 +23,7 @@ function startGame(){
 	nextBtn.classList.remove('hide')
 	shuffleQuestions = question.sort(() => Math.random () -.5)
 	index= 0
+	scoreNumber = 0
 	nextQuestion();
 }
 
@@ -36,15 +37,17 @@ function showQuestion(question){
 	questionElement.innerText = question.question
 	question.answers.forEach(answer =>{
 		const button = document.createElement('button')
-		button.innerTextm = answer.text
+		button.innerText = answer.text
 		button.classList.add('btn')
 		if (answer.correct){
 			button.dataset.correct = answer.correct	
 		}
 		button.addEventListener('click', selectAns)
-		answers.appendChild(button)
+		answerBtn.appendChild(button)
+		scoreNumber++
 	})
 }
+
 function resetState(){
 	clearStatusClass(document.body)
 	nextBtn.classList.add('hide')
@@ -56,7 +59,7 @@ function selectAns (e){
 	const selectedBtn= e.target
 	const correct = selectedBtn.dataset.correct
 	setStatusClass(document.body, correct)
-	Array.from(answerButtonsElement.children).forEach(button =>{
+	Array.from(answers.children).forEach(button =>{
 		setStatusClass(button, button.dataset.correct)
     })
     if (shuffleQuestions.length > index + 1){
@@ -133,5 +136,3 @@ const question = [
         
     }
     ]; 
-
-   
