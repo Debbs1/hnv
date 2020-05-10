@@ -132,7 +132,6 @@ const question = [
         {text:'Morgenstern', correct: false},
         {text:'Mjolnir', correct: true},
         {text:'Odin', correct: false},
-        {text:'Nameless', correct: false}]
-        
+        {text:'Nameless', correct: false}]  
     }
     ]; 
