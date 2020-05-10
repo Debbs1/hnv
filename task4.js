@@ -31,6 +31,7 @@ function nextQuestion(){
 	resetState();
 	currentQuestion = shuffleQuestions[index]
 	showQuestion(currentQuestion);
+	answerBtn.style.pointerEvents = 'auto'
 }
 
 function showQuestion(question){
@@ -63,6 +64,7 @@ function selectAns (e){
 		setStatusClass(button, button.dataset.correct)
     })
     if (shuffleQuestions.length > index + 1){
+	    answerBtn.style.pointerEvents = 'none'
     	nextBtn.classList.remove('hide')
     	}else {
     		startBtn.innerText = 'retry'
