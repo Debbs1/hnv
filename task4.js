@@ -119,7 +119,7 @@ const question = [
     {
         question: "Who is the odd one out here?",
         answers: [
-        {texxt:'Nebula', correct: false},
+        {text:'Nebula', correct: false},
         {text:'Hulk', correct: false},
         {text:'Fury', correct: false},
         {text:'Batman', correct: true}]
