@@ -81,6 +81,6 @@ const question = [
         {text:'Mjolnir', correct: true},
         {text:'Odin', correct: false},
         {text:'Nameless', correct: false}]
-        
+      
     }
     ];
